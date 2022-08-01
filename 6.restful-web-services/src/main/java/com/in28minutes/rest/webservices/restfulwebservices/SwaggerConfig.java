@@ -6,7 +6,6 @@ import java.util.Set;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.service.Contact;
 import springfox.documentation.spi.DocumentationType;
@@ -19,14 +18,14 @@ public class SwaggerConfig {
 
 	public static final Contact DEFAULT_CONTACT = new Contact(
 			"Ranga Karanam", "http://www.in28minutes.com", "in28minutes@gmail.com");
-	
+
 	public static final ApiInfo DEFAULT_API_INFO = new ApiInfo(
 			"Awesome API Title", "Awesome API Description", "1.0",
-			"urn:tos", DEFAULT_CONTACT, 
+			"urn:tos", "Ranga Karanam",
 			"Apache 2.0", "http://www.apache.org/licenses/LICENSE-2.0");
 
-	private static final Set<String> DEFAULT_PRODUCES_AND_CONSUMES = 
-			new HashSet<String>(Arrays.asList("application/json",
+	private static final Set<String> DEFAULT_PRODUCES_AND_CONSUMES =
+			new HashSet<>(Arrays.asList("application/json",
 					"application/xml"));
 
 	@Bean
